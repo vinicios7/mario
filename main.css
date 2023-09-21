@@ -1,0 +1,116 @@
+main {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	max-width: 1440px;
+	justify-content: space-between;
+	padding: 0 5%;
+}
+.main_info {
+	width: 50%;
+}
+.main_info p {
+	font-size: 16px;
+	margin: 50px 0 28px;
+	text-align: justify;
+}
+
+.main_info div {
+	display: flex;
+	column-gap: 32px;
+}
+
+.main_info div a,
+.main_info div button {
+	width: 100%;
+	padding: 15px 20px;
+	border-radius: 3px;
+	font-size: 12px;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+	margin-top: 10%;
+	transform: skew(-10deg);
+}
+
+.main-info div a {
+	background: transparent;
+	border: 3px solid var(--red);
+}
+
+.main_info div button {
+	background: transparent;
+	border: 3px solid var(--green);
+}
+.btn {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.btn {
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		background: var(--green);
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: 0.7s ease;
+	}
+}
+
+.btn {
+	&::before {
+		width: 0;
+		height: 100%;
+	}
+}
+
+.btn:hover {
+	&::before {
+		width: 110%;
+	}
+}
+
+.btnred {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	border: 3px solid var(--red);
+}
+
+.btnred {
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		background: var(--red);
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: 0.7s ease;
+	}
+}
+
+.btnred {
+	&::before {
+		width: 0;
+		height: 100%;
+	}
+}
+
+.btnred:hover {
+	&::before {
+		width: 110%;
+	}
+}
